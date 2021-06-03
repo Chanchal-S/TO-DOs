@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    table, th {
+      border: 1px solid black;
+    }
+</style>
+<form>
+    <label for="fname">"Enter your ID</label><br>
+    <input type="text" id="fname" name="fname">
+</form>
+<button type="button">Add</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table id="table1" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Event</th>
+            <th>Event_Date</th>
+            <th>Event_Time</th>
+        </tr>
+    </thead>
+</table>
+
+{% endblock content %}
