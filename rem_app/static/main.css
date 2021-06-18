@@ -17,6 +17,7 @@ body {
 	font-size: 0.9em;
 	text-align: justify;
 	color: #474747;
+	width: 100%;
 }
 #footer {
 	text-align: center;
@@ -57,7 +58,14 @@ body {
     margin-top: 30px;
 }
 #logo {
-	padding: 10px;
+	padding: 0px;
+	float: left;
+}
+#top_menu {
+    float: right;
+    padding: 50px 20px 0px 0px;
+    font-size: 1.2em;
+    color: #270c39;
 }
 #table1 thead, #table1 tr, #table1 th {
     border: 1px solid black;
