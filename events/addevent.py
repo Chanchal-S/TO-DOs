@@ -13,11 +13,11 @@ class EventForm(ModelForm):
 def addevent(request):
     submitted = False
     if request.method == 'POST':
-        form = EventForm(request.POST)
+        a=Event.objects.get(pk='user1')
+        form = EventForm(request.POST, instance=a)
         if form.is_valid():
-            cd = form.cleaned_data
-            #assert False
-            return HttpResponseRedirect('/addevent?submitted=True')
+            form.save()
+            return HttpResponseRedirect('/addevent/?submitted=True')
     else:
         form = EventForm()
         if 'submitted' in request.GET:
