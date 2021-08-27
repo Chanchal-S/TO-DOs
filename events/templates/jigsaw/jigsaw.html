@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+  
+{% block title %}Displaying Model Data{% endblock title %}
+  
+{% block content %}
+    <h1>Select Continent and Country</h1>
+    <form action="loadmap/" method="POST">
+    <select name="continent" id="continent-select" onchange="updateCountry()">
+        <option value="" disabled selected>--- Continent---</option>
+    </select> 
+      
+    <select name="country" id="country-select">
+        <option value="" disabled selected>--- Country ---</option>
+    </select>
+    <br>
+    <br>
+    <input id="load_map" type="submit" value="Load Map" />
+    {% csrf_token %}
+  </form>
+    <br>
+    <p id="demo"></p>
+
+
+<script>
+        
+  //function for creating continent
+  function createContinent(name, id) {
+      return {
+      name: name,
+      id: id,
+};
+}
+/**
+* Helper function for creating country
+**/
+function createCountry(name, id, continent) {
+return {
+  name: name,
+  id: id,
+  continent: continent,
+};
+}
+
+/**
+* Removes all options but the first value in a given select
+* and than selects the only remaining option
+**/
+function removeOptions(select) {
+while (select.options.length > 1) {                
+  select.remove(1);
+}
+
+select.value = "";
+}
+
+/**
+* Adds given options to a given select
+**/
+function addOptions(select, options) {
+console.log(select, options)
+options.forEach(function(option) {
+  select.options.add(new Option(option.name, option.id));
+});
+}
+
+/**
+* Select elements references
+**/
+var continentSelect = document.getElementById('continent-select');
+var countrySelect = document.getElementById('country-select');
+
+/**
+* Available Continents
+**/
+var continent = [
+createContinent('Asia', 'asia'),
+createContinent('Europe', 'europe'),
+];
+
+/**
+* Available models
+**/
+var country = [
+createCountry('India', 'India', 'asia'),
+createCountry('Afghanistan', 'Afghanistan', 'asia'),
+createCountry('Italy', 'Italy', 'europe'),
+createCountry('England', 'England', 'europe'),
+];
+
+
+//Updates country
+function updateCountry() {
+var selectedContinent = continentSelect.value;
+var options = country.filter(function(country) {
+  return country.continent === selectedContinent;
+});
+
+removeOptions(countrySelect);
+addOptions(countrySelect, options);
+}
+
+
+
+
+//Adds options to continent select
+addOptions(continentSelect, continent);
+
+/**function loadMap() {
+var userchoice = document.getElementById("country-select");
+var text = userchoice.options[userchoice.selectedIndex].text;
+//var data_svg = JSON.parse("{{svg_list|escapejs}}")
+//alert(userchoice.value);
+document.getElementById("demo").innerHTML = text;
+if(text=='Afghanistan'){
+//window.location = 'map_afghan.html';
+//location.replace("/map_afghan.html");
+}
+for(var i in data_svg){
+if(userchoice==data_svg[i]){
+  document.getElementById("demo").innerHTML = "present";
+}
+else
+document.getElementById("demo").innerHTML = "not present";
+} 
+}**/
+
+  </script>
+   {% autoescape off %}{{ aditi }}{% endautoescape %}
+  {% endblock content %}
+
+ 
