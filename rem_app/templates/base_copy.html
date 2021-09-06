@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reminder Application</title>
+<style>
+
+#wrapper {
+
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#106158;
+	background-size: auto;
+	width: auto;	
+}
+body {
+	background-color:white;
+	background-size: auto;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 0.9em;
+	text-align: justify;
+	color: #474747;
+	width:auto;
+}
+nav{
+  float:right;
+}
+#footer {
+	text-align: center;
+	font-size: 0.8em;
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FFFFFF;
+	border-top: thin solid #BBBBBB;
+	clear: both;
+	color: #969696;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float:right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+li a:hover{
+  background-color: #04AA6D;
+}
+
+#leftsidebar {
+	width: 180px;
+	height: 350px;
+	float: left;
+}
+#main {
+	width: 560px;
+	float: left;
+	margin-left: 20px;
+	margin-right: 10px;
+	padding-right: 10px;
+  margin-top: 30px;
+}
+#logo {
+	float: left;
+}
+
+.top_banner{
+  position: relative;
+  width: 1000px;
+  object-fit: cover;
+
+}
+.top_banner_content{
+  position: absolute;
+    width: 100%;
+    top: 15%;
+    font-size: 37px;
+    color: #fff;
+    line-height: 1.2;
+    padding-left: 7%;
+}
+#top_menu {
+    float: right;
+    padding: 50px 20px 0px 0px;
+    font-size: 1.2em;
+    color: #270c39;
+}
+#table1 thead, #table1 tr, #table1 th {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <header id="header">
+    <div id="logo">
+      <img src="{% static 'logo.jpeg' %}", width="60px", height="45px" alt=""/>
+    </div>
+    <div>
+      <nav id="nav">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About Us</a></li>
+          <li><a href="/events">Saved Events</a></li>
+          <li><a href="/addevent">New Event</a></li>
+          <li><a href="/jigsaw">Play Jigsaw</a></li>
+        </ul>
+        </nav>
+        <div class="top_banner">
+          <img src="{% static 'tb_1.jpg' %}", width="1335px"  >
+          <div class="top_banner_content">
+            <section id="main">
+              {% block content %}
+              <h3>Welcome to The TODOs app!</h3>
+              <p>This is the demo template</p>
+              {% endblock content %}
+            </section>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <p>This App is for entertainment purposes.</p>
+          </div>
+        </div>
+        <div>
+        </div> 
+      </div>
+       
+  </header>
+ <!----<aside id="leftsidebar"></aside>-->
+  
+  <footer id="footer" style="color: palegreen; background-color:#106158 ;">Copyright &copy; 2021 DesignStudio</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+
+.static {
+    cursor: not-allowed;
+    fill: yellowgreen;
+    fill-opacity:0.20;
+  }
+
+.draggable {
+  cursor: move; 
+  fill:darkslateblue;
+  fill-opacity:0.75;
+
+}
+  
+.info {
+    font-family: "Public Sans", Verdana, sans-serif;
+    font-size: 20px;
+    fill:black;
+    stroke: black;
+  
+  }
+
+.label {
+  font-family: "Public Sans", Verdana, sans-serif;
+  font-size: 15px;
+  fill:black;
+  stroke:black;
+  }
+  
+

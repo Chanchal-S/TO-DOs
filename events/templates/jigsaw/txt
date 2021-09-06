@@ -1,0 +1,8 @@
+for country in Maps.objects.values_list('country_name'):
+        print("hello")
+        if (country == abc):
+            print(country)
+            svgelement = Maps.objects.get(country_name=abc)
+            break
+        else:
+            print("map does not exist")
