@@ -18,7 +18,7 @@ def all_events(request):
     return render(request, 'events/event_list.html',{'event_list':event_list}, {'different_base': different_base})
 
 def jigsaw_func(request):
-    different_base =  "base.html"
+    different_base =  "b2.html"
     print("jigsaw_func")
     return render(request, 'jigsaw/jigsaw.html', {'different_base': different_base})
     

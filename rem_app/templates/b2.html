@@ -3,31 +3,47 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Load Map</title>
+<title>Reminder Application</title>
 <link href="{% static 'main2.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="wrapper">
-  <header id="header">
-    <div id="logo"><img src="{% static 'logo.jpeg' %}", width="60px", height="60px" alt=""/><h2>Welcome to the APP</h2></div>
-    <div id="topbanner"><img src="{% static 'top_banner2.jpg' %}", width="1200px", height="300px" alt=""/></div>    
-  </header>
-  <aside id="leftsidebar">
-    <nav id="nav">
-    <ul>
-      <li>Home</li>
-      <li>About Us</li>
-      <li><a href="/events" style="font-family: 'Times New Roman', Times, serif;color: chocolate;">Saved Events</a></li>
-      <li><a href="/addevent" style="color: blueviolet;">New Event</a></li>
-      <li><a href="/jigsaw">Play Jigsaw</a></li>
-    </ul>
-    </nav>
-  </aside>
-  <section id="main">
-    {% block content %}
-    {% endblock content %}
-  </section>
-  <footer id="footer">Copyright &copy; 2021 DesignStudio</footer>
-</div>
+  <div id="wrapper">
+    <header id="header">
+      <div id="logo">
+        <img src="{% static 'logo.jpeg' %}", width="60px", height="45px"  alt=""/>
+      </div>
+      <div>
+        <nav id="nav">
+          <ul>
+            <li><a href="/jigsaw">Play Jigsaw</a></li>
+            <li><a href="/events">Saved Events</a></li>
+            <li><a href="/addevent">New Event</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Home</a></li>
+            
+          </ul>
+          </nav>
+          <div class="top_banner">
+            <img src="{% static 'tb_2.png' %}", width="1335px" height="1100px"  >
+            <div class="top_banner_content">
+              <section id="main">
+                {% block content %}
+                <h3>Welcome to The TODOs app!</h3>
+                <p>This is the demo template</p>
+                {% endblock content %}
+              </section>
+              <br><br><br><br><br><br><br><br><br><br><br>
+              <p>This App is for entertainment purposes.</p>
+            </div>
+          </div>
+          <div>
+          </div> 
+        </div>
+         
+    </header>
+   <!----<aside id="leftsidebar"></aside>-->
+    
+    <footer id="footer" style="color: palegreen; background-color:#106158 ;">Copyright &copy; 2021 DesignStudio</footer>
+  </div>
 </body>
 </html>
