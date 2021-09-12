@@ -25,7 +25,7 @@ SECRET_KEY = 'ria*qei(d5^fqi@1aa_q7lafc+3#mxoknv%ogf(gkw(%v#=zmj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.map-geeks.com']
 
 
 # Application definition
@@ -120,4 +120,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'rem_app/static'),]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
