@@ -99,3 +99,34 @@ li a:hover:active{
 #table1 thead, #table1 tr, #table1 th {
     border: 1px solid black;
 }
+
+
+.static {
+  cursor: not-allowed;
+  fill: yellowgreen;
+  fill-opacity:0.20;
+}
+
+.draggable {
+cursor: move; 
+fill:darkslateblue;
+fill-opacity:0.75;
+
+}
+
+.info {
+  font-family: "Public Sans", Verdana, sans-serif;
+  font-size: 20px;
+  fill:black;
+  stroke: black;
+
+}
+
+.label {
+font-family: "Public Sans", Verdana, sans-serif;
+font-size: 15px;
+fill:black;
+stroke:black;
+}
+
+

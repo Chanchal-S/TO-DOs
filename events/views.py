@@ -24,9 +24,10 @@ def jigsaw_func(request):
     
 svgelement=None
 def all_svg(request):
-    different_base =  "b2.html"
+    different_base =  "b3.html"
     print("all_svg")
     selected_map=request.POST.get('puzzle', False)
+    print(selected_map)
     map_from_db=Maps.objects.get(country_name=selected_map)
     svgelement = map_from_db.country_svg
     #return render(request, 'events/loadmap.html',{'aditi':svgelement})
