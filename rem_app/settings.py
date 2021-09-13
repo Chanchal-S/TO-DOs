@@ -25,7 +25,7 @@ SECRET_KEY = 'ria*qei(d5^fqi@1aa_q7lafc+3#mxoknv%ogf(gkw(%v#=zmj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.map-geeks.com']
+ALLOWED_HOSTS = ['www.map-geeks.com','127.0.0.1']
 
 
 # Application definition
