@@ -24,7 +24,7 @@ def jigsaw_func(request):
     
 svgelement=None
 def all_svg(request):
-    different_base =  "b2.html"
+    different_base =  "b3.html"
     print("all_svg")
     selected_map=request.POST.get('puzzle', False)
     print(selected_map)
