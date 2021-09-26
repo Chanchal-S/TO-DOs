@@ -31,7 +31,7 @@ def all_svg(request):
     map_from_db=Maps.objects.get(country_name=selected_map)
     svgelement = map_from_db.country_svg
     #return render(request, 'events/loadmap.html',{'aditi':svgelement})
-    return render(request, 'loadmap/loadmap.html',{'aditi':svgelement}, {'different_base': different_base})
+    return render(request, 'loadmap/loadmap.html',{'aditi':svgelement, 'different_base': different_base},content_type='text/html')
 
 
   # https://stackoverflow.com/questions/5895588/django-multivaluedictkeyerror-error-how-do-i-deal-with-it  
