@@ -15,7 +15,7 @@ def index(request):
 def all_events(request):
     different_base =  "base.html"
     event_list = Event.objects.all()
-    return render(request, 'events/event_list.html',{'event_list':event_list}, {'different_base': different_base},content_type='text/html')
+    return render(request, 'events/event_list.html',{'event_list':event_list, 'different_base': different_base},content_type='text/html')
 
 def jigsaw_func(request):
     different_base =  "b2.html"
